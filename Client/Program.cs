@@ -10,6 +10,7 @@ namespace Client
     {
         static async Task Main(string[] args)
         {
+
             using var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var client = new ZodiacSign.ZodiacSignClient(channel);
             Console.WriteLine("Enter your date of birth: ");
