@@ -21,13 +21,14 @@ namespace Client
                 if (ValidateInput(input))
                 {
                     var reply = await client.GetSignAsync(
-                        new ZodiacRequest { BirthDate = input });
+                        new ZodiacRequest { DateOfBirth = input });
                     Console.WriteLine(reply.ZodiacSign);
                     break;
                 }
                 Console.WriteLine("Invalid! Please respect the format (mm/dd/yyyy) and try again.");
             }
             Console.ReadKey();
+            Console.ReadLine();
         }
 
         static bool ValidateInput(string userInput) 
