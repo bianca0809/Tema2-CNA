@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "Server";
+
+package Sign;
+
+service ZodiacSign {
+  rpc GetSign (ZodiacRequest) returns (ZodiacReply);
+}
+
+message ZodiacRequest {
+  string dateOfBirth = 1;
+}
+
+message ZodiacReply {
+  string zodiacSign = 1;
+}
